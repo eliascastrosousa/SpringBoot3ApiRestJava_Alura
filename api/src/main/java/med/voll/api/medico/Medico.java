@@ -5,7 +5,6 @@ import lombok.*;
 import med.voll.api.endereco.Endereco;
 @Table(name = "medicos")
 @Entity(name = "medico")
-@Embeddable
 @Getter
 @Setter
 @NoArgsConstructor
