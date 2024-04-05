@@ -1,13 +1,8 @@
-package med.voll.api.consulta;
+package med.voll.api.domain.consulta;
 
 import jakarta.persistence.*;
 import lombok.*;
-import med.voll.api.medico.DadosCadastroMedico;
-import med.voll.api.medico.Medico;
-import med.voll.api.paciente.DadosCadastroPaciente;
-import med.voll.api.paciente.Paciente;
 
-import java.util.Date;
 @Table(name = "consultas")
 @Entity(name = "consulta")
 @Getter
@@ -19,9 +14,8 @@ public class Consulta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Embedded
+    /*
     private Paciente paciente;
-    @Embedded
     private Medico medico;
     private Date dataEHora;
 
@@ -30,4 +24,5 @@ public class Consulta {
         this.medico = new Medico(dados.medico());
         this.dataEHora = dados.data();
     }
+     */
 }

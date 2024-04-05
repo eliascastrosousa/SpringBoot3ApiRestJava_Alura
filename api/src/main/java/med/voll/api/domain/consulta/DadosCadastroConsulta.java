@@ -1,9 +1,9 @@
-package med.voll.api.consulta;
+package med.voll.api.domain.consulta;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import med.voll.api.medico.DadosCadastroMedico;
-import med.voll.api.paciente.DadosCadastroPaciente;
+import med.voll.api.domain.medico.DadosCadastroMedico;
+import med.voll.api.domain.paciente.DadosCadastroPaciente;
 
 import java.util.Date;
 
