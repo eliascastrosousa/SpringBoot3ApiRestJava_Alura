@@ -32,8 +32,17 @@ public class Consulta {
 
     private LocalDateTime data;
 
+    @Column(name = "motivo_cancelamento")
+    @Enumerated(EnumType.STRING)
+    private MotivoCancelamento motivoCancelamento;
+
 
     public Consulta(DadosAgendamentoConsulta dados) {
 
+    }
+    public void cancelar(MotivoCancelamento motivo) {
+        this.motivoCancelamento = motivo;
+        // vai alterar o objeto no banco adicionando um motivo de cancelamento,
+        // deixando claro que o objeto foi cancelado
     }
 }
