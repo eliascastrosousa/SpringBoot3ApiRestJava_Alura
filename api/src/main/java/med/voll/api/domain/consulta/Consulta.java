@@ -40,6 +40,11 @@ public class Consulta {
     public Consulta(DadosAgendamentoConsulta dados) {
 
     }
+
+    public Consulta( Medico medico, Paciente paciente, LocalDateTime data) {
+    }
+
+
     public void cancelar(MotivoCancelamento motivo) {
         this.motivoCancelamento = motivo;
         // vai alterar o objeto no banco adicionando um motivo de cancelamento,
