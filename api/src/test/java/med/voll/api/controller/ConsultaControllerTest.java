@@ -43,7 +43,7 @@ class ConsultaControllerTest {
     @MockBean
     private AgendaDeConsultas agendaDeConsultas;
     @Test
-    @DisplayName("Deveria devolver codigo http 400 quando informacoes estao invalidas")
+    @DisplayName("(CREATE) Deveria devolver codigo http 400 quando informacoes estao invalidas")
     void agendar_cenario1() throws Exception {
         var response = mvc.perform(post("/consultas"))
                 .andReturn().getResponse();
@@ -52,7 +52,7 @@ class ConsultaControllerTest {
     }
 
     @Test
-    @DisplayName("Deveria devolver codigo http 200 quando informacoes estao corretas")
+    @DisplayName("(CREATE) Deveria devolver codigo http 200 quando informacoes estao corretas")
     void agendar_cenario2() throws Exception {
         var data = LocalDateTime.now().plusHours(1);
         var especialidade = Especialidade.CARDIOLOGIA;

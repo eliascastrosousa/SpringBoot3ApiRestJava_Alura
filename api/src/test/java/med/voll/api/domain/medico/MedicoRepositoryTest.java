@@ -33,22 +33,40 @@ class MedicoRepositoryTest {
     private TestEntityManager em;
 
     @Test
-    @DisplayName("Deveria devolver null quando unico medico cadastrado nao esta disponivel na data")
-    void escolherMedicoAleatorioLivreNaDataCenario1() {
-        var proximaSegundaAs10 = LocalDate.now().with(TemporalAdjusters.next(DayOfWeek.MONDAY)).atTime(10,0);
-        var paciente = cadastrarPaciente("paciente", "paciente@email.com", "00000000000");
+    @DisplayName("haver nenhum médico disponível cadastrado no banco de dados")
+    void cenario01() {
         var medico = cadastrarMedico("medico", "medico@email.com", "000000", Especialidade.CARDIOLOGIA);
+        var medicosdisponiveis = medicoRepository.findAtivo();
+        assertThat(medicosdisponiveis).isTrue();
+    }
 
-        //nao to conseguindo cadastrar consulta,f fala que atributo data nao pode ser nulo
+    @Test
+    @DisplayName("NÃO haver nenhum médico ativo cadastrado no banco de dados")
+    void cenario02() {
+        var medicosdisponiveis = medicoRepository.findAtivo();
+        assertThat(medicosdisponiveis).isNull();
+    }
+
+    @Test
+    @DisplayName("Deveria devolver null quando unico medico cadastrado nao esta disponivel na data")
+    void cenario03() {
+        var proximaSegundaAs10 = LocalDate.now()
+                .with(TemporalAdjusters.next(DayOfWeek.MONDAY))
+                .atTime(10, 0);
+        var paciente = cadastrarPaciente("paciente", "paciente@email.com", "00000000000");
+        System.out.println("Paciente cadastrado");
+        var medico = cadastrarMedico("medico", "medico@email.com", "000000", Especialidade.CARDIOLOGIA);
+        System.out.println("Medico cadastrado");
+        //nao to conseguindo cadastrar consulta,fala que atributo data nao pode ser nulo
         cadastrarConsulta(medico, paciente, proximaSegundaAs10);
-
+        System.out.println("Consulta cadastrada");
         var medicoLivre = medicoRepository.escolherMedicoAleatorioNaData(Especialidade.CARDIOLOGIA, proximaSegundaAs10);
         assertThat(medicoLivre).isNull();
     }
 
     @Test
     @DisplayName("Deveria devolver ok quando  medico cadastrado esta disponivel na data")
-    void escolherMedicoAleatorioLivreNaDataCenario2() {
+    void cenario04() {
         var medico = cadastrarMedico("medico", "medico@email.com", "000000", Especialidade.CARDIOLOGIA);
 
         var proximaSegundaAs10 = LocalDate.now().with(TemporalAdjusters.next(DayOfWeek.MONDAY)).atTime(10,0);
@@ -56,8 +74,12 @@ class MedicoRepositoryTest {
         assertThat(medicoLivre).isEqualTo(medico);
     }
 
-    private void cadastrarConsulta( Medico medico, Paciente paciente, LocalDateTime data ) {
-        em.persist(new Consulta(medico, paciente, data));
+    // metodos
+
+
+
+    private void cadastrarConsulta(Medico medico, Paciente paciente, LocalDateTime data) {
+        em.persist(new Consulta(null, medico, paciente, data, null));
     }
 
     private Medico cadastrarMedico(String nome, String email, String crm, Especialidade especialidade) {
