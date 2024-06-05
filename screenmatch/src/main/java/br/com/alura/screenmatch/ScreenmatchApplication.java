@@ -1,14 +1,24 @@
 package br.com.alura.screenmatch;
 
+import br.com.alura.screenmatch.model.Serie;
 import br.com.alura.screenmatch.principal.Principal;
+import br.com.alura.screenmatch.repository.EpisodioRepository;
+import br.com.alura.screenmatch.repository.SerieRepository;
 import br.com.alura.screenmatch.util.Funcoes_Lambdas;
+import br.com.alura.screenmatch.util.Funcoes_Series;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ScreenmatchApplication implements CommandLineRunner {
-	private Principal principal = new Principal();
+
+	@Autowired
+	private SerieRepository serieRepository;
+
+	@Autowired
+	private EpisodioRepository episodioRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ScreenmatchApplication.class, args);
@@ -16,7 +26,7 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-
+		Principal principal = new Principal(serieRepository, episodioRepository);
 		principal.exibeMenu();
 
 	}

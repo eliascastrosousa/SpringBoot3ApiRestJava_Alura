@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.model;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -9,15 +10,19 @@ import java.time.format.DateTimeParseException;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-
+@Entity
+@Table(name = "episodios")
 public class Episodio {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String titulo;
     private Integer numTemporada;
     private Integer numEpisodio;
-    private double avaliacao;
+    private Double avaliacao;
     private LocalDate dataLancamento;
-
+    @ManyToOne
+    private Serie serie;
 
     public Episodio(Integer numTemporada, DadosEpisodio dadosEpisodio) {
         this.titulo = dadosEpisodio.titulo();
@@ -34,5 +39,16 @@ public class Episodio {
             this.dataLancamento = null;
         }
     }
+    @Override
+    public String toString() {
+        return
+                "\nSerie: " + serie.getTitulo() +
+                "\nTitulo: " + titulo  +
+                "\nTemporada: " + numTemporada +
+                "\nNumero do episodio: " + numEpisodio +
+                "\nAvaliacao: " + avaliacao +
+                "\nData Lancamento: " + dataLancamento ;
+    }
+
 
 }
