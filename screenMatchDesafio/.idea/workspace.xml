@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d34c27d-5356-459b-bfa3-2132cd6349d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../desafio/src/main/java/config/CorsConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio/src/main/java/controller/SerieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio/src/main/java/model/Serie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio/src/main/java/model/SerieDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio/src/main/java/repository/SerieRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio/src/main/java/service/SerieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/screenMatchDesafio/config/CorsConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/screenMatchDesafio/controller/SerieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/screenMatchDesafio/model/Serie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/screenMatchDesafio/model/SerieDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/screenMatchDesafio/repository/SerieRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/screenMatchDesafio/service/SerieService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2hi7ljutDeeN0173asand2Ws6Eu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ScreenMatchDesafioApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/java-criando-primeira-api-conectando-front",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/karin/Documents/GitHub/SpringBoot3ApiRestJava_Alura/screenMatchDesafio"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ScreenMatchDesafioApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.screenMatchDesafio.ScreenMatchDesafioApplication" />
+      <module name="screenMatchDesafio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.screenMatchDesafio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ScreenMatchDesafioApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d34c27d-5356-459b-bfa3-2132cd6349d6" name="Changes" comment="" />
+      <created>1718065196481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718065196481</updated>
+    </task>
+    <servers />
+  </component>
+</project>
